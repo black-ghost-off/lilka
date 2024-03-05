@@ -13,6 +13,7 @@
 #include "lualilka_gpio.h"
 #include "lualilka_util.h"
 #include "lualilka_state.h"
+#include "lualilka_wifi.h"
 
 namespace lilka {
 
@@ -195,6 +196,7 @@ lua_State* lua_setup(const char* dir) {
     lualilka_geometry_register(L);
     lualilka_gpio_register(L);
     lualilka_util_register(L);
+    lualilka_wifi_register(L);
 
     lilka::serial_log("lua: init canvas");
     lilka::Canvas* canvas = new lilka::Canvas();
